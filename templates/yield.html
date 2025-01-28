@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Yield Prediction</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+
+        h1 {
+            color: #2e8b57;
+            margin-top: 80px; /* Adjust margin to accommodate fixed header */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background-color: #2e8b57;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px; /* Add margin for spacing between buttons */
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f0f8ff; /* Background color matching body */
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+        }
+
+        header div {
+            display: flex;
+            align-items: center;
+        }
+
+        header span {
+            margin-right: 10px;
+            color: #2e8b57;
+            font-weight: bold; /* Make the text bold */
+        }
+
+        header img {
+            max-height: 50px;
+        }
+
+        .container {
+            margin-top: 100px; /* Adjust margin to accommodate fixed header */
+        }
+
+        .card {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            color: white;
+        }
+
+        .text-info {
+            color: #17a2b8; /* Info color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span>Rural Roots</span>
+            <img src="static/images/logobac.webp" alt="Rural Roots Logo">
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Crop Yield Prediction</h1>
+        <div class="card">
+            <h2>Input All Features Here</h2>
+            <form method="POST" action="/yield">
+                <div class="form-group">
+                    <label for="Year">Year:</label>
+                    <input type="number" name="Year" id="Year" value="2025" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="average_rain_fall_mm_per_year">Average Rainfall (mm/year):</label>
+                    <input type="number" name="average_rain_fall_mm_per_year" id="average_rain_fall_mm_per_year" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pesticides_tonnes">Pesticides (tonnes):</label>
+                    <input type="number" name="pesticides_tonnes" id="pesticides_tonnes" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="avg_temp">Average Temperature (°C):</label>
+                    <input type="number" name="avg_temp" id="avg_temp" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Area">Area:</label>
+                    <input type="text" name="Area" id="Area" value="India" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Item">Item:</label>
+                    <input type="text" name="Item" id="Item" value="Rice, paddy" required>
+                </div>
+
+                <button type="submit" class="btn">Predict</button>
+                <button onclick="window.location.href='/'" class="btn">Back</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

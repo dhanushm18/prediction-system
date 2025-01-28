@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Prediction Result</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+
+        h1 {
+            color: #2e8b57;
+            margin-top: 80px; /* Adjust margin to accommodate fixed header */
+        }
+
+        .result-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            color: white;
+        }
+
+        .result-value {
+            color: #17a2b8; /* Info color */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .btn {
+            background-color: #2e8b57;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px; /* Add margin for spacing between buttons */
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .result-image {
+            width: 200px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f0f8ff; /* Background color matching body */
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+        }
+
+        header div {
+            display: flex;
+            align-items: center;
+        }
+
+        header span {
+            margin-right: 10px;
+            color: #2e8b57;
+            font-weight: bold; /* Make the text bold */
+        }
+
+        header img {
+            max-height: 50px;
+        }
+
+        .container {
+            margin-top: 100px; /* Adjust margin to accommodate fixed header */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span>Rural Roots</span>
+            <img src="static/images/logobac.webp" alt="Rural Roots Logo">
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="result-container">
+            <h2>Predicted Yield:</h2>
+            {% if prediction %}
+                <div class="text-center mt-4">
+                    <h2>Predicted Yield:</h2>
+                    <h3 class="text-info">{{ prediction }}</h3>
+                </div>
+                <div class="image-container">
+                    <img src="static/images/tieldres.png" alt="Crop Image" class="result-image">
+                </div>
+            {% endif %}
+            <button onclick="window.location.href='/yield'" class="btn">Predict Again</button>
+            <button onclick="window.location.href='/'" class="btn">Home Page</button>
+        </div>
+    </div>
+</body>
+</html>

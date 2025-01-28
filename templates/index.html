@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Roots Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header style="position: fixed; top: 0; left: 0; width: 100%; background-color: #F0F8FF; padding: 10px 0; display: flex; justify-content: center; align-items: center;"> 
+        <div style="display: flex; align-items: center;">
+            <span style="margin-right: 10px; color: #2E8B57;">Rural Roots</span>
+            <img src="static/images/logobac.webp" alt="Rural Roots Logo" style="max-height: 50px;">
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Empowering Agriculture with AI</h1>
+                <p>Make better farming decisions with data-driven insights and cutting-edge AI solutions.</p>
+                <a href="#services" class="btn">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="static/images/farmerai.webp" alt="Farmer AI">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="static/images/yield.webp" alt="Crop Yield">
+                    <h3>Predict Crop Yield</h3>
+                    <p>Use AI insights to accurately forecast crop yields and maximize productivity.</p>
+                    <a href="/yield" class="btn">Try Now</a> 
+                </div>
+               
+                <div class="card">
+                    <img src="static/images/crop.webp" alt="Best Crop">
+                    <h3>Predict Best Crop</h3>
+                    <p>Discover the best crops to grow based on weather and soil conditions.</p>
+                    <a href="/crop" class="btn">Try Now</a> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rural Roots | Revolutionizing Farming with AI</p>
+        </div>
+    </footer>
+</body>
+</html>

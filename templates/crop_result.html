@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction Result</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff; /* Light blue background */
+        }
+
+        h1 {
+            color: #2e8b57; /* Green color for the heading */
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #2e8b57; /* Green button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px; /* Add margin for spacing between buttons */
+        }
+
+        img {
+            width: 200px; /* Width of the image */
+            height: auto; /* Maintain aspect ratio */
+            margin: 20px 0; /* Add space around the image */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Crop Prediction Result</h1>
+
+    <img src="static/images/croprecomadation.png" alt="Crop Image" /> 
+
+    <p>{{ result }}</p>
+
+    <button onclick="window.location.href='/crop'">Predict Again</button>
+    <button onclick="window.location.href='/'">Home Page</button>
+
+</body>
+</html>
