@@ -7,7 +7,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 mx = pickle.load(open('minmaxscaler.pkl', 'rb'))
 sc = pickle.load(open('standscaler.pkl', 'rb'))
 dtr = pickle.load(open('dtr.pkl', 'rb'))
-preprocessor = pickle.load(open('/Users/dhanushm17/Documents/project/prediction/preprocesser.pkl', 'rb'))
+preprocessor = pickle.load(open('preprocesser.pkl', 'rb'))
 
 app = Flask(__name__)
 
