@@ -1,7 +1,6 @@
-Flask
-Flask-Cors
-pandas
+flask
+gunicorn
 numpy
 scikit-learn
-matplotlib
-gunicorn
+pandas
+pickle-mixin
